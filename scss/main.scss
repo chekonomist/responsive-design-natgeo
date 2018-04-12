@@ -1,0 +1,131 @@
+@import "./imports/_normalize.scss";
+
+$dark-grey: #333333;
+$light-grey: #aaaaaa;
+$yellow: #fecd2f;
+
+
+*{
+  box-sizing: border-box;
+  outline: 1px solid rgba(255,0,0,.2);
+}
+
+body{
+font-family: "Gill Sans";
+}
+
+img {
+   width: 100%;
+   display: block;
+}
+
+// First block (top navigation)
+
+.top-nav{
+  border-bottom: 2px solid $light-grey;
+  padding: 25px;
+  background: white;
+}
+
+.nat-geo-logo{
+  max-width: 130px;
+  position: fixed;
+  top: 2px;
+  left: 0;
+}
+
+.hamburger-menu{
+  position: fixed;
+  right: 1.5%;
+  top: 1%;
+}
+.hamburger-line{
+    width: 30px;
+    height: 5px;
+    background-color: $dark-grey;
+    margin: 6px 0;
+}
+
+// Second Block (Section titles)
+
+.photography-title{
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 12px;
+}
+
+.travel-title{
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+
+.see-more-title{
+  font-weight: 400;
+  border-bottom: 2px solid $yellow;
+  display: inline-block;
+}
+
+// Third Block (The two articles)
+
+.first-article{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .first-article-content{
+    width: 100%;
+  }
+
+    .img-cameras{
+      border: 2px solid $light-grey;
+    }
+
+// Not working. No border.
+    .text-cameras{
+      border: solid 2 px $light-grey;
+    }
+
+.second-article{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .second-article-content{
+    width: 100%;
+  }
+
+// Fourth block (only the show more button)
+
+.show-more-button{
+  margin: 0 auto;
+  display: inline;
+  background-color: $yellow;
+  padding: 5px 50px;
+  width: 100%;
+}
+
+// Fifth block (Title and photo of the year)
+
+// Sixth Block (Black block)
+
+.block-container{
+  background-color: $dark-grey;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .content-box{
+    width: 100%;
+  }
+
+  .title-on-block-container{
+    color: white;
+  }
+
+// Seventh Block (contact us block)
+
+.seventh-block{
+  background-color: $light-grey;
+}

@@ -159,7 +159,7 @@ template {
 /*# sourceMappingURL=normalize.min.css.map */
 * {
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 0, 0, 0.2); }
+  outline: 1px dashed rgba(255, 0, 0, 0.2); }
 
 body {
   font-family: "Gill Sans"; }
@@ -170,8 +170,7 @@ img {
 
 .top-nav {
   border-bottom: 2px solid #aaaaaa;
-  padding: 25px;
-  background: white; }
+  padding: 25px; }
 
 .nat-geo-logo {
   max-width: 130px;
@@ -211,6 +210,9 @@ img {
 
 .first-article-content {
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .first-article-content {
+      width: 50%; } }
 
 .img-cameras {
   border: 2px solid #aaaaaa; }
@@ -224,6 +226,9 @@ img {
 
 .second-article-content {
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .second-article-content {
+      width: 50%; } }
 
 .show-more-button {
   margin: 0 auto;
@@ -240,11 +245,22 @@ img {
 
 .content-box {
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .content-box {
+      width: 50%; } }
 
 .title-on-block-container {
   color: white; }
 
 .seventh-block {
-  background-color: #aaaaaa; }
+  background-color: #aaaaaa;
+  display: flex;
+  flex-wrap: wrap; }
+
+.contact-block {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .contact-block {
+      width: 50%; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -158,8 +158,7 @@ template {
 
 /*# sourceMappingURL=normalize.min.css.map */
 * {
-  box-sizing: border-box;
-  outline: 1px dashed rgba(255, 0, 0, 0.2); }
+  box-sizing: border-box; }
 
 body {
   font-family: "Gill Sans"; }
@@ -168,26 +167,59 @@ img {
   width: 100%;
   display: block; }
 
+.fansy-title {
+  font-family: "Gill Sans","Century Gothic", sans-serif; }
+
 .top-nav {
   border-bottom: 2px solid #aaaaaa;
-  padding: 25px; }
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75); }
 
 .nat-geo-logo {
   max-width: 130px;
   position: fixed;
   top: 2px;
-  left: 0; }
+  left: 0;
+  opacity: 0.75; }
 
 .hamburger-menu {
   position: fixed;
   right: 1.5%;
   top: 1%; }
+  @media screen and (min-width: 1024px) {
+    .hamburger-menu {
+      visibility: hidden; } }
 
 .hamburger-line {
   width: 30px;
   height: 5px;
   background-color: #333333;
-  margin: 6px 0; }
+  margin: 6px 0;
+  opacity: 0.75; }
+
+.menu-desktop {
+  visibility: hidden;
+  text-align: right;
+  color: #aaaaaa; }
+  @media screen and (min-width: 1024px) {
+    .menu-desktop {
+      visibility: visible; } }
+
+.menu-options-desktop {
+  display: inline-block;
+  border-left: 1px solid #fecd2f;
+  padding: 5px 35px;
+  margin: 0;
+  font-family: "Gill Sans", "Century Gothic", sans-serif;
+  font-size: 12px; }
+
+.second-block {
+  padding-top: 90px;
+  font-family: "Georgia", "Palatino",sans-serif; }
 
 .photography-title {
   font-weight: 500;
@@ -195,14 +227,21 @@ img {
   letter-spacing: 12px; }
 
 .travel-title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 25px;
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  margin-bottom: 0; }
 
 .see-more-title {
   font-weight: 400;
   border-bottom: 2px solid #fecd2f;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 35px; }
+
+.img-mokey-tree {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 80%; }
 
 .first-article {
   display: flex;
@@ -217,12 +256,32 @@ img {
 .img-cameras {
   border: 2px solid #aaaaaa; }
 
+.title-article-photos {
+  font-family: "Gill Sans","Century Gothic",sans-serif;
+  font-size: 15px;
+  font-weight: 700; }
+  @media screen and (min-width: 768px) {
+    .title-article-photos {
+      padding-left: 10px; } }
+
 .text-cameras {
-  border: solid 2 px #aaaaaa; }
+  padding-left: 15px;
+  border-left: 2px solid #aaaaaa;
+  margin-left: 5px;
+  font-size: 12px; }
+  @media screen and (min-width: 768px) {
+    .text-cameras {
+      padding-left: 10px;
+      border-left: hidden;
+      margin-left: 0;
+      font-size: 18px; } }
 
 .second-article {
   display: flex;
   flex-wrap: wrap; }
+  @media screen and (min-width: 768px) {
+    .second-article {
+      margin-top: 20px; } }
 
 .second-article-content {
   width: 100%; }
@@ -232,10 +291,20 @@ img {
 
 .show-more-button {
   margin: 0 auto;
-  display: inline;
+  margin-top: 10px;
+  display: block;
   background-color: #fecd2f;
-  padding: 5px 50px;
-  width: 100%; }
+  padding: 10px 50px;
+  width: 100%;
+  border: 2px solid black;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px; }
+  @media screen and (min-width: 768px) {
+    .show-more-button {
+      max-width: 700px; } }
+
+.fifth-block {
+  margin-top: 130px; }
 
 .block-container {
   background-color: #333333;
@@ -248,19 +317,86 @@ img {
   @media screen and (min-width: 768px) {
     .content-box {
       width: 50%; } }
+  @media screen and (min-width: 768px) and (min-width: 1024px) {
+    .content-box {
+      width: 25%; } }
 
 .title-on-block-container {
-  color: white; }
+  color: white;
+  font-size: 18px;
+  margin: 20px 50px;
+  text-align: center; }
+  @media screen and (min-width: 1024px) {
+    .title-on-block-container {
+      margin: 20px 10px; } }
+
+.icons-container {
+  margin-bottom: 100px; }
+
+.fa-twitter {
+  color: #55acee;
+  font-size: 30px;
+  margin-right: 20px; }
+
+.fa-facebook-f {
+  color: #3b5998;
+  font-size: 30px;
+  margin-right: 20px; }
+
+.fa-instagram {
+  color: #4c68d7;
+  font-size: 30px; }
+
+.text-black-box {
+  color: white;
+  font-family: "Gill Sans","Century Gothic",sans-serif;
+  font-size: 14px; }
+
+.see-more-title-black {
+  color: white;
+  font-family: "Gill Sans","Century Gothic",sans-serif;
+  font-weight: 800;
+  display: inline-block;
+  border-bottom: 2px solid #fecd2f; }
 
 .seventh-block {
   background-color: #aaaaaa;
   display: flex;
   flex-wrap: wrap; }
 
-.contact-block {
+.contact-block-1 {
   width: 100%; }
   @media screen and (min-width: 768px) {
-    .contact-block {
-      width: 50%; } }
+    .contact-block-1 {
+      width: 60%;
+      border-left: 2px solid #333333;
+      padding-left: 5px; } }
+
+.contact-block-2 {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .contact-block-2 {
+      width: 40%; } }
+
+.email-submit {
+  background: #fecd2f;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 2px; }
+
+.titles-contact {
+  font-size: 20px;
+  font-family: "Gill Sans", "Century Gothic", sans-serif;
+  font-weight: 700; }
+
+.follow-us-title {
+  padding-left: 10px;
+  border-left: 2px solid #333333;
+  line-height: 2; }
 
 /*# sourceMappingURL=styles.css.map */

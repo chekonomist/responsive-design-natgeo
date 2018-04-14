@@ -1,14 +1,18 @@
 @import "./imports/_normalize.scss";
 
+// Variables
 $dark-grey: #333333;
 $light-grey: #aaaaaa;
 $yellow: #fecd2f;
 $tablet: 768px;
+$desktop:1024px;
+$opacity-level: .75;
+$fancy-fonts: "Gill Sans","Century Gothic", sans-serif;
 
 
 *{
   box-sizing: border-box;
-  outline: 1px dashed rgba(255,0,0,.2);
+  // outline: 1px dashed rgba(255,0,0,.2);
 }
 
 body{
@@ -20,12 +24,21 @@ img {
    display: block;
 }
 
+// Titles' styles
+.fansy-title{
+  font-family: "Gill Sans","Century Gothic", sans-serif;
+}
+
 // First block (top navigation)
 
 .top-nav{
   border-bottom: 2px solid $light-grey;
-  padding: 25px;
-  // background: white;
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,$opacity-level);
 }
 
 .nat-geo-logo{
@@ -33,22 +46,53 @@ img {
   position: fixed;
   top: 2px;
   left: 0;
+  opacity: $opacity-level;
 }
 
 .hamburger-menu{
   position: fixed;
   right: 1.5%;
   top: 1%;
+
+  @media screen and (min-width: $desktop){
+    visibility: hidden;
+  }
 }
 .hamburger-line{
     width: 30px;
     height: 5px;
     background-color: $dark-grey;
     margin: 6px 0;
+    opacity: $opacity-level
+}
+
+// Menu for Desktop
+
+.menu-desktop{
+  visibility: hidden;
+  text-align: right;
+  color: $light-grey;
+
+  @media  screen and (min-width: $desktop){
+    visibility: visible;
+  }
+}
+
+.menu-options-desktop{
+  display: inline-block;
+  border-left: 1px solid $yellow;
+  padding: 5px 35px;
+  margin:0;
+  font-family: $fancy-fonts;
+  font-size: 12px;
 }
 
 // Second Block (Section titles)
 
+.second-block{
+  padding-top: 90px;
+  font-family: "Georgia", "Palatino",sans-serif;
+}
 .photography-title{
   font-weight: 500;
   font-size: 30px;
@@ -56,15 +100,23 @@ img {
 }
 
 .travel-title{
-  font-weight: 400;
+  font-weight: 500;
   font-size: 25px;
   letter-spacing: 5px;
+  margin-bottom: 0;
 }
 
 .see-more-title{
   font-weight: 400;
   border-bottom: 2px solid $yellow;
   display: inline-block;
+  margin-bottom: 35px;
+}
+
+.img-mokey-tree{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 80%;
 }
 
 // Third Block (The two articles)
@@ -86,14 +138,37 @@ img {
       border: 2px solid $light-grey;
     }
 
-// Not working. No border.
+  .title-article-photos{
+    font-family: "Gill Sans","Century Gothic",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    @media screen and (min-width: $tablet){
+      padding-left: 10px;
+    }
+  }
+
     .text-cameras{
-      border: solid 2 px $light-grey;
+      padding-left: 15px;
+      border-left: 2px solid $light-grey;
+      margin-left: 5px;
+      font-size: 12px;
+
+      @media screen and (min-width: $tablet){
+        padding-left: 10px;
+        border-left: hidden;
+        margin-left: 0;
+        font-size: 18px;
+      }
     }
 
 .second-article{
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet){
+    margin-top: 20px;
+  }
 }
 
   .second-article-content{
@@ -107,14 +182,25 @@ img {
 
 .show-more-button{
   margin: 0 auto;
-  display: inline;
+  margin-top: 10px;
+  display: block;
   background-color: $yellow;
-  padding: 5px 50px;
+  padding: 10px 50px;
   width: 100%;
+  border: 2px solid rgba(0,0,0,1);
+  color: rgba(0,0,0,.8);
+  font-size: 12px;
+
+  @media screen and (min-width: $tablet){
+    max-width: 700px;
+
+  }
 }
 
 // Fifth block (Title and photo of the year)
-
+.fifth-block{
+  margin-top: 130px;
+}
 // Sixth Block (Black block)
 
 .block-container{
@@ -129,13 +215,58 @@ img {
 
     @media screen and (min-width: $tablet){
       width: 50%;
+
+    @media screen and (min-width: $desktop){
+        width: 25%;
+    }
     }
   }
 
   .title-on-block-container{
     color: white;
+    font-size: 18px;
+    margin: 20px 50px;
+    text-align: center;
+
+    @media screen and (min-width: $desktop){
+      margin: 20px 10px;
+    }
   }
 
+  .icons-container{
+    margin-bottom: 100px;
+  }
+
+  .fa-twitter{
+    color: #55acee;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  .fa-facebook-f{
+    color: #3b5998;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  .fa-instagram{
+    color: #4c68d7;
+    font-size: 30px;
+  }
+
+.text-black-box{
+  color: rgba(255,255,255,1);
+  font-family: "Gill Sans","Century Gothic",sans-serif;
+  font-size: 14px;
+}
+
+.see-more-title-black{
+  color: rgba(255,255,255,1);
+  font-family:  "Gill Sans","Century Gothic",sans-serif;
+  font-weight: 800;
+  display: inline-block;
+  border-bottom: 2px solid $yellow;
+}
 // Seventh Block (contact us block)
 
 .seventh-block{
@@ -144,10 +275,50 @@ img {
   flex-wrap: wrap;
 }
 
-  .contact-block{
+  .contact-block-1{
     width: 100%;
 
     @media screen and (min-width: $tablet){
-      width: 50%;
+      width: 60%;
+      border-left: 2px solid $dark-grey;
+      padding-left: 5px;
     }
   }
+
+  .contact-block-2{
+    width: 100%;
+
+    @media screen and (min-width: $tablet){
+      width: 40%;
+    }
+  }
+
+
+  .email-submit{
+    // width: 40%;
+    background: $yellow;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:  5px;
+    padding-bottom:5px;
+    margin-left: 2px;
+  }
+
+  .titles-contact{
+    font-size: 20px;
+    font-family: $fancy-fonts;
+    font-weight: 700;
+
+    @media screen and (min-width: $tablet){
+      // border-left: 2px solid $dark-grey;
+    }
+  }
+
+.follow-us-title{
+  padding-left: 10px;
+  border-left: 2px solid $dark-grey;
+  line-height: 2;
+}
